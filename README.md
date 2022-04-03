@@ -35,6 +35,7 @@ which will a help page with the available params.
 ## Covered libraries
 
 - [python-tabulate](https://pypi.org/project/tabulate/)
+- [uniplot](https://pypi.org/project/uniplot/)
 
 ## License
 

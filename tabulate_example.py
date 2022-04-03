@@ -20,7 +20,7 @@ def show_dataframe(args):
 
 def show_list_data(args):
     print(tabulate(
-        ds.get_list_with_headers(with_headers=True),
+        ds.get_list(with_headers=True),
         headers='firstrow',
         tablefmt=args.tablefmt,
         floatfmt=args.floatfmt))

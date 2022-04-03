@@ -17,3 +17,4 @@ python_version = "3.9"
 
 [scripts]
 tabulate = "python tabulate_example.py"
+uniplot = "python uniplot_example.py"
