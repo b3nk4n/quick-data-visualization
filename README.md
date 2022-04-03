@@ -32,10 +32,17 @@ which will a help page with the available params.
 (quick-data-visualization) $ pipenv run tabulate
 ```
 
+An actual usage example of `uniplot_example.py` with optional arguments would be the following:
+
+```bash
+(quick-data-visualization) $ pipenv run uniplot array --no-lines --width 100
+```
+
 ## Covered libraries
 
 - [python-tabulate](https://pypi.org/project/tabulate/)
 - [uniplot](https://pypi.org/project/uniplot/)
+- [termgraph](https://pypi.org/project/termgraph/)
 
 ## License
 

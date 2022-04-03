@@ -28,19 +28,22 @@ def show_list_data(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Tabulate example plots')
-    parser.add_argument('--tablefmt', default='fancy_grid', help='The table format, e.g. fancy_grid (default), simple, pipe.')
     parser.set_defaults(func=lambda args: parser.print_help())
     subparsers = parser.add_subparsers()
 
-    array = subparsers.add_parser('array')
+    common_parser = argparse.ArgumentParser(add_help=False)
+    common_parser.add_argument('--tablefmt', type=str, default='fancy_grid',
+                               help='The table format, e.g. fancy_grid (default), simple, pipe.')
+
+    array = subparsers.add_parser('array', parents=[common_parser])
     array.set_defaults(func=show_array)
 
-    dataframe = subparsers.add_parser('dataframe')
-    dataframe.add_argument('--floatfmt', default='.2f', help='The number format, e.g. ".2f" (default).')
+    dataframe = subparsers.add_parser('dataframe', parents=[common_parser])
+    dataframe.add_argument('--floatfmt', type=str, default='.2f', help='The number format, e.g. ".2f" (default).')
     dataframe.set_defaults(func=show_dataframe)
 
-    list_data = subparsers.add_parser('list')
-    list_data.add_argument('--floatfmt', default='.2f', help='The number format, e.g. ".2f" (default).')
+    list_data = subparsers.add_parser('list', parents=[common_parser])
+    list_data.add_argument('--floatfmt', type=str, default='.2f', help='The number format, e.g. ".2f" (default).')
     list_data.set_defaults(func=show_list_data)
 
     arguments = parser.parse_args()

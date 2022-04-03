@@ -4,9 +4,10 @@ import data.datasets as ds
 
 
 def show_array(args):
+    print(args)
     plot(ys=ds.get_numpy_array()[:, 1],
          title='Timeseries Numpy Array',
-         lines=True,
+         lines=args.lines,
          width=args.width,
          color=args.color,
          interactive=args.interactive)
@@ -32,17 +33,22 @@ def show_list_data(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Uniplot example plots')
-    parser.add_argument('--width', default=64, help='The width of the plotting region, in characters. Default is 64.')
-    parser.add_argument('--color', default=True, help='Enable (default) or disable colors.')
-    parser.add_argument('--interactive', default=False, help='Enable or disable (default) interactive mode.')
     parser.set_defaults(func=lambda args: parser.print_help())
     subparsers = parser.add_subparsers()
 
-    array = subparsers.add_parser('array')
-    array.add_argument('--lines', default=True, help='Enable (default) or disable lines between data points.')
+    common_parser = argparse.ArgumentParser(add_help=False)
+    common_parser.add_argument('--width', type=int, default=64, help='The width of the plotting region, in characters. Default is 64.')
+    common_parser.add_argument('--color', type=bool, default=True, action=argparse.BooleanOptionalAction,
+                           help='Enable (default) or disable colors.')
+    common_parser.add_argument('--interactive', type=bool, default=False, action=argparse.BooleanOptionalAction,
+                           help='Enable or disable (default) interactive mode.')
+
+    array = subparsers.add_parser('array', parents=[common_parser])
+    array.add_argument('--lines', type=bool, default=True, action=argparse.BooleanOptionalAction,
+                       help='Enable (default) or disable lines between data points.')
     array.set_defaults(func=show_array)
 
-    list_data = subparsers.add_parser('list')
+    list_data = subparsers.add_parser('list', parents=[common_parser])
     list_data.set_defaults(func=show_list_data)
 
     arguments = parser.parse_args()

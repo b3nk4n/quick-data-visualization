@@ -1,8 +1,8 @@
-Product,Price
-Butter,2.29
-Bread,3.19
-Potatoes,1.99
-Carrots,1.29
-Onions,0.99
-Beef,5.99
-Chips,0.99
+Product,Price,UVP
+Butter,2.29,2.29
+Bread,3.19,3.19
+Potatoes,1.99,2.29
+Carrots,1.29,1.39
+Onions,0.99,0.99
+Beef,5.99,6.99
+Chips,0.99,1.79
