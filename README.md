@@ -43,6 +43,7 @@ An actual usage example of `uniplot_example.py` with optional arguments would be
 - [python-tabulate](https://pypi.org/project/tabulate/)
 - [uniplot](https://pypi.org/project/uniplot/)
 - [termgraph](https://pypi.org/project/termgraph/)
+- [matplotlib](https://pypi.org/project/matplotlib/)
 
 ## License
 
