@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import data.datasets as ds
 
 
-def show_array():
+def show_array(args):
     data = ds.get_numpy_array()
     plt.plot(data[:, 0], data[:, 1])
     plt.title('Timeseries line chart')

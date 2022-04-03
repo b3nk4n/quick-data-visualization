@@ -44,6 +44,7 @@ An actual usage example of `uniplot_example.py` with optional arguments would be
 - [uniplot](https://pypi.org/project/uniplot/)
 - [termgraph](https://pypi.org/project/termgraph/)
 - [matplotlib](https://pypi.org/project/matplotlib/)
+- [plotly](https://pypi.org/project/plotly/)
 
 ## License
 
