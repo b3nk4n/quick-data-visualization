@@ -10,6 +10,7 @@ matplotlib = "==3.5.1"
 plotly = "==5.6.0"
 pandas = "==1.4.2"
 termgraph = "==0.5.3"
+plotext = "==4.2.0"
 
 [dev-packages]
 
@@ -22,3 +23,4 @@ uniplot = "python uniplot_example.py"
 termgraph = "python termgraph_example.py"
 matplotlib = "python matplotlib_example.py"
 plotly = "python plotly_example.py"
+plotext = "python plotext_example.py"

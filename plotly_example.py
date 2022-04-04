@@ -3,7 +3,7 @@ import plotly.express as px
 import data.datasets as ds
 
 
-def show_array(args):
+def show_array(_):
     data = ds.get_numpy_array()
     fig = px.line(x=data[:, 0], y=data[:, 1], title='Timeseries line chart')
     fig.update_xaxes(title_text='Timestamp')

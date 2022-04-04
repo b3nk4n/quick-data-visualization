@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1003c7f021cbf21221a1adefe47553a14db5f2deb938d026d31a781235662eca"
+            "sha256": "d84450d42428494799bbb64ab083ab8844fc4fc2587978cc8c3b64dd528bb35c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -234,6 +234,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==9.1.0"
+        },
+        "plotext": {
+            "hashes": [
+                "sha256:e005ce2e6381df518008d7c3acab0971eeade65912d5f1342c6cb02d035c16be",
+                "sha256:fccb794238f9001d835b158ae2a1f540757a58d4ebb406d99bd68f75f5f7a81e"
+            ],
+            "index": "pypi",
+            "version": "==4.2.0"
         },
         "plotly": {
             "hashes": [

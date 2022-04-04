@@ -40,11 +40,15 @@ An actual usage example of `uniplot_example.py` with optional arguments would be
 
 ## Covered libraries
 
+**UI based**
+- [matplotlib](https://pypi.org/project/matplotlib/)
+- [plotly](https://pypi.org/project/plotly/)
+
+**Text based**
 - [python-tabulate](https://pypi.org/project/tabulate/)
 - [uniplot](https://pypi.org/project/uniplot/)
 - [termgraph](https://pypi.org/project/termgraph/)
-- [matplotlib](https://pypi.org/project/matplotlib/)
-- [plotly](https://pypi.org/project/plotly/)
+- [plotext](https://pypi.org/project/plotext/)
 
 ## License
 
